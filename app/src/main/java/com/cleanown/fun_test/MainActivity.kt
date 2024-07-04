@@ -43,8 +43,10 @@ class MainActivity : AppCompatActivity() {
 //            }
             try {
                 val oaid = OAIDTool.getAIString(applicationContext)
+                txt.text = "google ad id: ${oaid}"
                 Log.d(TAG, "oaid:${oaid}")
             } catch (e: Exception) {
+                txt.text = "google ad id: ${e.message}"
                 Log.d(TAG, "onCreate-e: ${e.message}")
             }
         }
